@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    /* always set this like this html and body element */
+    html {
+        background-color: #ffffff;
+        /* Arial is default fonts if the poppins is not downloaded */
+        /*Helvetica is default font for the mac users */
+        font-family: 'Poppins', Helvetica, Arial, sans-serif;
+        min-height: 100vh;
+        width: 100%;
+        /* font-display: :swap; is default setting it avoids Flash of Invisible Text(FOIT) */
+        /* it will make the "font size" and the "spacing" to be 10px as a 1rem (1rem=10px)*/
+        font-size: 62.5%;
+    }
+    /* min-height is not inherited by the child  so we have replace the min-height by the height property */
+    body {
+        /* make the font-size to the 16px as a default  */
+        font-size: 1.6rem;
+    }
+
+    #root {
+        height: 100vh;
+        width: 100%;
+    }
+}
